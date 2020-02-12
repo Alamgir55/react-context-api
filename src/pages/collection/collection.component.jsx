@@ -3,7 +3,6 @@ import React, {useContext} from 'react';
 import CollectionItem from '../../components/collection-item/collection-item.component';
 import collectionsContext from '../../contexts/collections/collections.context';
 
-import { selectCollection } from '../../redux/shop/shop.selectors';
 
 import './collection.styles.scss';
 
@@ -23,8 +22,6 @@ const CollectionPage = ({ match }) => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  collection: selectCollection(ownProps.match.params.collectionId)(state)
-});
+
 
 export default CollectionPage;
